@@ -32,5 +32,5 @@ sns.scatterplot(x=df["time_study"], y=df["Marks"], color="red")
 plt.title("Study Time vs Marks")
 plt.xlabel("Time Studied (hours)")
 plt.ylabel("Marks")
-plt.savefig("reports/study_vs_marks.png")
+
 plt.show()
