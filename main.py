@@ -5,6 +5,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
+import joblib
 
 df = pd.read_csv("Student_Marks.csv")    #Load dataset
 
@@ -123,6 +124,29 @@ plt.title("Actual vs Predicted Marks")
 plt.legend()
 plt.savefig("Actual_vs_Predicted.png") 
 
+# Extract feature importance from the trained model
+feature_importance = np.abs(model.coef_)  # Get absolute values of coefficients
+features = X_train.columns
+
+# Create a DataFrame for better visualization
+importance_df = pd.DataFrame({'Feature': features, 'Importance': feature_importance})
+importance_df = importance_df.sort_values(by='Importance', ascending=False)
+
+# Plot feature importance   for more accurate predictions
+plt.figure(figsize=(8, 5))
+sns.barplot(x=importance_df['Importance'], y=importance_df['Feature'], palette="viridis")
+plt.title("Feature Importance in Predicting Marks")
+plt.xlabel("Importance")
+plt.ylabel("Feature")
+plt.savefig("Feature_Importance.png")
+
 plt.show()
+print(importance_df)
+
+# Save the trained model to a file
+joblib.dump(model, "student_marks_predictor.pkl")
+
+print("Model saved successfully!")
+
 
 
