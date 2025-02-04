@@ -32,5 +32,45 @@ sns.scatterplot(x=df["time_study"], y=df["Marks"], color="red")
 plt.title("Study Time vs Marks")
 plt.xlabel("Time Studied (hours)")
 plt.ylabel("Marks")
+plt.savefig("scatter_plot.png") 
+
+
+
+
+plt.figure(figsize=(14, 5))
+
+# Histogram
+plt.subplot(1, 2, 1)
+sns.histplot(df["Marks"], bins=20, kde=True, color="blue")
+plt.title("Distribution of Marks")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+
+# Boxplot
+plt.subplot(1, 2, 2)
+sns.boxplot(y=df["Marks"], color="orange")
+plt.title("Boxplot of Marks")
+plt.savefig("marks_distribution.png") 
+
+#Relationship Between Study Time and Marks
+plt.figure(figsize=(10, 5))
+sns.regplot(x=df["time_study"], y=df["Marks"], color="green")
+plt.title("Study Time vs Marks (with Regression Line)")
+plt.xlabel("Time Studied (hours)")
+plt.ylabel("Marks")
+plt.savefig("Regression line.png")
+
+#relationship between number of courses and marks 
+plt.figure(figsize=(10, 5))
+sns.boxplot(x=df["number_courses"], y=df["Marks"], palette="coolwarm")
+plt.title("Number of Courses vs Marks")
+plt.xlabel("Number of Courses")
+plt.ylabel("Marks")
+plt.savefig("Course_VS_Marks.png")
+
+
+
 
 plt.show()
+
+
