@@ -37,38 +37,21 @@ This project predicts student performance based on the number of courses, study 
 _This is where users enter the number of courses, study time, and marks per course._
 
 ### 📌 Prediction Output
-![Predicted Marks](predicted marks.png)
+![Predicted Marks](predictedmarks.png)
 _The predicted marks based on the inputs provided._
 
 ---
 
-## 🔧 Installation & Usage
-### 1️⃣ Install Required Dependencies
-Make sure you have Python installed, then run:
-```bash
-pip install numpy pandas scikit-learn joblib
-```
 
-### 2️⃣ Run the Tkinter GUI
-To open the GUI and make predictions, run:
-```bash
-python predict_ui.py
-```
-
-### 3️⃣ Run CLI-Based Prediction
-If you prefer a command-line interface, run:
-```bash
-python predict.py
-```
 
 ---
 
 ## 🔬 Model Training Process
--1️⃣ **Load the Dataset** → Student performance data is loaded using Pandas.
--2️⃣ **Feature Engineering** → Extract relevant features: study time, number of courses, marks per course.
--3️⃣ **Train Model** → A **Linear Regression** model is trained using Scikit-Learn.
--4️⃣ **Save Model** → The trained model is saved using `joblib` for future predictions.
--5️⃣ **Build GUI** → Tkinter is used to create an interactive interface for user input and result display.
+-1️⃣ **Load the Dataset** → Student performance data is loaded using Pandas.  
+-2️⃣ **Feature Engineering** → Extract relevant features: study time, number of courses, marks per course.  
+-3️⃣ **Train Model** → A **Linear Regression** model is trained using Scikit-Learn.  
+-4️⃣ **Save Model** → The trained model is saved using `joblib` for future predictions.  
+-5️⃣ **Build GUI** → Tkinter is used to create an interactive interface for user input and result display.  
 
 ---
 
@@ -100,17 +83,17 @@ python predict.py
 
 
 ## 🚀 Future Improvements
-🔹 Enhance the UI with better design.
-🔹 Add more features to improve prediction accuracy.
-🔹 Deploy the application as a web-based tool using **Flask** or **Streamlit**.
-🔹 Implement deep learning models for better accuracy.
+🔹 Enhance the UI with better design.  
+🔹 Add more features to improve prediction accuracy.  
+🔹 Deploy the application as a web-based tool using **Flask** or **Streamlit**.  
+🔹 Implement deep learning models for better accuracy.  
 
 ---
 
 ## 📌 Author
 👤 **MANSI TYAGI**  
-📧 mansityagi472@gmail.com 
-🌐 https://github.com/mansityagi01
+📧 mansityagi472@gmail.com   
+🌐 https://github.com/mansityagi01  
 
 ---
 
